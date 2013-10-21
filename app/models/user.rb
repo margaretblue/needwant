@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
             	uniqueness: { case_sensitive: false }
 	has_secure_password
 	validates :password, length: { minimum: 6 }
-	has_one :wishlist
+	has_one :wishlist, dependent: :destroy
 
 	def User.new_remember_token
 		SecureRandom.urlsafe_base64

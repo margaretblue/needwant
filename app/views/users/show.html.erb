@@ -4,3 +4,20 @@
 	<%= @user.name %>
 	<%= @user.email %>
 </h1>
+
+<% provide(:title, @user.name) %>
+<div class="row">
+  
+  <aside>
+    
+  </aside>
+  <div class="span8">
+    <% if @user.wishlist %>
+      <h3>Wishlists(<%= @user.wishlist %>)</h3>
+      <ol class="microposts">
+        <%= render @wishlists %>
+      </ol>
+     
+    <% end %>
+  </div>
+</div>
