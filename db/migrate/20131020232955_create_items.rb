@@ -13,5 +13,6 @@ class CreateItems < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :items, [:wishlist_id, :created_at]
   end
 end
