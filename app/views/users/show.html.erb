@@ -13,9 +13,10 @@
   </aside>
   <div class="span8">
     <% if @user.wishlist %>
-      <h3>Wishlists(<%= @user.wishlist %>)</h3>
-      <ol class="microposts">
+      <h3>Wishlists(for user id <%= @user.wishlist.user_id %>)</h3>
+      <ol class="wishlists">
         <%= render @wishlists %>
+        That was 1 wishlist
       </ol>
      
     <% end %>

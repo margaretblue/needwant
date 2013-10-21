@@ -1,16 +1,17 @@
 Needwant::Application.routes.draw do
 
-  root  to: 'static_pages#home'
+  root  to: 'users#new'
   resources :users
   get '/help' => 'users#help'
   get '/signup' =>  'users#new'
 
-  resources :sessions, only: [:new, :create, :destroy]
+
+  resources :sessions, only: [:new, :create]
   get '/signin' => 'sessions#new'
-  get '/signout' => 'sessions#destroy'
+  delete '/signout' => 'sessions#destroy'
 
   resources :wishlists
-  
+
 
   resources :items
  
