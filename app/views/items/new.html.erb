@@ -1,0 +1,28 @@
+<h1>Add new item for <% @user.name %></h1> 
+	<div class="row">
+	<div class="col-md-4 offset3"> 
+		<%= form_for(:item, url: "/items") do |f| %>
+
+			<%= f.hidden_field :wishlist_id, :value => @wishlist_id %>
+		 	<%= f.label :title %>:
+		 	<%= f.text_field :title %><br />
+
+		 	<%= f.label :brand %>:
+			<%= f.text_field :brand %><br />
+
+			<%= f.label :category %>:
+			<%= f.text_field :category %><br />
+
+			<%= f.label :price %>:
+			<%= f.text_field :price %><br />
+
+			<%= f.label :url %>:
+			<%= f.text_field :url %><br />
+
+			<%= f.label :image %>: 
+			<%= f.text_field :image %><br />
+
+		 	<%= f.submit  "Add Item", class: "btn btn-small btn-primary" %>
+		<% end %>
+	</div>
+</div>

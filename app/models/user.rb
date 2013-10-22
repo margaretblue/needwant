@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
 	has_secure_password
 	validates :password, length: { minimum: 6 }
 	has_one :wishlist, dependent: :destroy
+	#has_many :items, :through => :wishlist
 
 
 	def create_remember_token
