@@ -13,6 +13,6 @@ Needwant::Application.routes.draw do
 
   resources :items
 
-  get '/item_form' =>'items#item_form'
+  get '/item_form/' =>'items#item_form'
  
 end

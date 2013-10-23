@@ -4,7 +4,57 @@
 
 var giftyFunctions = function(){
 	
-	//code from friendfeed javascript, sets the location of the iframe
+	function getMaxImage() {
+	  var maxDimension = 0;
+	  var maxImage = null;
+
+	  // Iterate through all the images.
+	  var imgElements = document.getElementsByTagName('img');
+	  for (var index in imgElements) {
+	    var img = imgElements[index];
+	    var currDimension = img.width * img.height;
+	    if (currDimension  > maxDimension){
+	       maxDimension = currDimension
+	       maxImage = img;
+	    }
+	  }
+	  // Check if an image has been found.
+	  if (maxImage) 
+	    return maxImage.src;
+	  else
+	    return null;
+	}
+
+	// function get_default_price() {
+ //      if (product_defaults && typeof product_defaults.price == 'function') {
+ //        return jq.trim(product_defaults.price())
+ //      } 
+
+ //      var patt = /[\d,]{1,5}\.\d{2}[^\d"']/g
+ //      var price_matches = jq('body').text().match(patt) || []
+ //      if (price_matches.length > 0) {
+ //        for (var i=0; i<price_matches.length; i++) {
+ //          price_matches[i] = price_matches[i].substring(0, price_matches[i].length-1) // remove last char
+ //        }
+ //      }
+ //      if (price_matches.length > 1) {
+ //        // not jquery so can't call filter- want to remove all 0's
+ //        //price_matches = price_matches.filter(function(v) { return v === '0.00'? false: true;});
+ //        var price = price_matches[0]
+ //        for (var i=1; i<price_matches.length; i++) {
+ //          if (price != price_matches[i]) {
+ //            return '';
+ //          }
+ //        }
+ //        return price;
+ //      } else if (price_matches.length == 1) {
+ //        return price_matches[0];
+ //      }
+ //      return '';
+ //    }
+	
+
+	//frankensteined from friendfeed js, sets location of iframe
 	function giftySetIframe(){
 		var iframe;
 		
@@ -18,9 +68,18 @@ var giftyFunctions = function(){
 		if (!iframe) 
 			return;
 		
-		var url = 'http://localhost:3000/item_form/'
-		url += '#title=' + document.title;
+	//pass variables through search string, retrieve them as params in controller	
+		
+		// var product_defaults = null;
+		//var default_price = encodeURIComponent(get_default_price());
+
+		var biggest_image = getMaxImage();
+
+		var url = 'http://localhost:3000/item_form/?'
+		url += '&title=' + document.title;
 		url += '&url=' + window.location.href;
+		url += '&image=' + biggest_image;
+	//	url += '&price=' + default_price;
 		try {
 			iframe.location.replace(url);
 		} 

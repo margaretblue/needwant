@@ -1,4 +1,4 @@
-<h1>Add new item for <% @user.name %></h1> 
+<h4>Add new item to Wishlist <% @user.name %></h4> 
 	<div class="row">
 	<div class="col-md-4 offset3"> 
 		<%= form_for(:item, url: "/items") do |f| %>
@@ -22,7 +22,7 @@
 			<%= f.label :image %>: 
 			<%= f.text_field :image %><br />
 
-		 	<%= f.submit  "Add Item", class: "btn btn-small btn-primary" %>
+		 	<%= f.submit  "Do Want!", class: "btn btn-small btn-primary" %>
 		<% end %>
 	</div>
 </div>

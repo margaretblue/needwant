@@ -11,6 +11,14 @@ class ItemsController < ApplicationController
 	end
 
 	def item_form
+		@title=params[:title]
+		@url = params[:url]
+		# @price = params[:price]
+		@image = params[:image]
+		puts "%%%%%%%%%%%%%%%%%%%%%%"
+		puts @title
+		puts @url
+		# puts @price
 		@user = current_user
 		@wishlist_id = @user.wishlist.id
 		render 'item_form.html.erb'

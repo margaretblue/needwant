@@ -1,14 +1,15 @@
 <body onload="addText();">
   <p style="float:right;"><a href="javascript:closeBox('close');">Close</a></p>
-  <p><strong>Add item</strong></p>
-<h1>Add new item for <% @user.name %></h1> 
+  <p><strong>Add item to Wantlist</strong></p>
 	<div class="row">
 	<div class="col-md-4 offset3"> 
 		<%= form_for(:item, url: "/items") do |f| %>
 
 			<%= f.hidden_field :wishlist_id, :value => @wishlist_id %>
+
+
 		 	<%= f.label :title %>:
-		 	<%= f.text_field :title %><br />
+		 	<%= f.text_field :title, :placeholder => @title, :value => @title %><br />
 
 		 	<%= f.label :brand %>:
 			<%= f.text_field :brand %><br />
@@ -17,13 +18,13 @@
 			<%= f.text_field :category %><br />
 
 			<%= f.label :price %>:
-			<%= f.text_field :price %><br />
+			<%= f.text_field :price, :placeholder => @price, :value => @price %><br />
 
-			<%= f.label :url %>:
-			<%= f.text_field :url %><br />
+			<%= f.label :url %>
+			<%= f.text_field :url, :placeholder => @url, :value => @url %><br />
 
 			<%= f.label :image %>: 
-			<%= f.text_field :image %><br />
+			<%= f.text_field :image, :placeholder => @image, :value => @image %><br />
 
 		 	<%= f.submit  "Add Item", class: "btn btn-small btn-primary" %>
 		<% end %>

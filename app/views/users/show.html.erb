@@ -1,8 +1,6 @@
-<h1>
-	<%= gravatar_for @user %>
+<h3>
 	<%= @user.name %>
-	<%= @user.email %>
-</h1> 
+</h3> 
 
 <% provide(:title, @user.name) %>
 <div class="row">
@@ -12,7 +10,7 @@
   </aside>
   <div class="span8">
     <% if @user.wishlist %>
-      <h3><%= @user.wishlist.user_id %> <%= @user.name %>'s Wantlist</h3>  <a class="btn btn-small btn-info" href="/items/new">+ Add Item to Wantlist</a>
+      <h3><%= @user.name %>'s Wantlist</h3>  <a class="btn btn-small btn-info" href="/items/new">+ Add Item to Wantlist</a>
       <ul class="wishlists media-list">
           <% @wishlists.item_ids.each do |item_id| %>
             <% item_obj= Item.find(item_id) %>
