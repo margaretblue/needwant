@@ -7,7 +7,6 @@ class WishlistsController < ApplicationController
 		if @wishlist.save
 			flash[:success] = "Wishlist created!"
 			redirect_to root_url
-			#@Wishlist.create(params[:wishlist])
 		else 
 			### change this to page that displays wishlists
 			render 'static_pages/home'

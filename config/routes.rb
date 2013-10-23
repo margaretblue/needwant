@@ -12,5 +12,7 @@ Needwant::Application.routes.draw do
   resources :wishlists
 
   resources :items
+
+  get '/item_form' =>'items#item_form'
  
 end

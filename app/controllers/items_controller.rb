@@ -10,4 +10,10 @@ class ItemsController < ApplicationController
 		redirect_to user_path(@user_id)
 	end
 
+	def item_form
+		@user = current_user
+		@wishlist_id = @user.wishlist.id
+		render 'item_form.html.erb'
+	end
+
 end

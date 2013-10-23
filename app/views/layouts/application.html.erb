@@ -7,7 +7,6 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
 	<%= render 'layouts/header' %>
     <div class="container">
       <% flash.each do |key, value| %>
@@ -16,7 +15,6 @@
       <% end %>
       <%= yield %>
       <%= render 'layouts/footer' %>
-      <%= debug(params) if Rails.env.development? %>
     </div>
 
 <%= yield %>
