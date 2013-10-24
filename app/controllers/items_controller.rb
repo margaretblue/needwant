@@ -20,4 +20,11 @@ class ItemsController < ApplicationController
 		render 'item_form.html.erb'
 	end
 
+	def destroy
+		Item.find(params[:id]).destroy
+		# or you can do this
+		# Sample.delete(params[:id])
+		redirect_to user_path
+	end
+
 end
