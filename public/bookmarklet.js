@@ -112,7 +112,7 @@ window.bookmarklet({
       }
     }
 
-    var product_defaults = null;
+      var product_defaults = null;
 		var baby_url = encodeURIComponent(baby_get_url());
     var baby_title = encodeURIComponent(baby_get_default_title());
     var baby_price = encodeURIComponent(baby_get_default_price());
