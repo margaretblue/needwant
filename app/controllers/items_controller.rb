@@ -15,8 +15,6 @@ class ItemsController < ApplicationController
 		@url = params[:url]
 		# @price = params[:price]
 		@image = params[:image]
-		puts "%%%%%%%%%%%%%%%%%%%%%%"
-		binding.pry
 		@user = current_user
 		@wishlist_id = @user.wishlist.id
 		render 'item_form.html.erb'

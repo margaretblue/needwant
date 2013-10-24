@@ -13,10 +13,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
     	flash[:success] = "Welcome to your wantlist!"
-      puts "&&&&&&&&&&&&&&&&"
       @wishlist = Wishlist.create(:user_id => @user.id)
-      puts "$$$$$$$$$$$$$$$"
-      binding.pry
       sign_in(@user)
     	redirect_to @user
       #redirect_to root_url
