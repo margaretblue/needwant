@@ -1,9 +1,5 @@
 <% provide(:title, @user.name) %>
 <div class="row">
-  
-  <aside>
-    
-  </aside>
   <div class="span8">
     <% if @user.wishlist %>
       <h3><%= @user.name %>'s Wantlist</h3>  <a class="btn btn-small btn-info" href="/items/new">+ Add Item to Wantlist</a>
@@ -19,6 +15,7 @@
                 <%= item_obj.brand %><br />
                 $<%= item_obj.price %><br />
                 <span class="badge"><%= item_obj.category %></span>
+                <span class="glyphicon glyphicon-minus-sign">Remove</span>
                 
               </div>
 

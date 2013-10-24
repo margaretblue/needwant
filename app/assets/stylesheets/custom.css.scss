@@ -33,6 +33,12 @@ textarea {
   }
 }
 
+.navbar-inverse {
+    background-color: #A3A89E;
+    border: none;
+  }
+
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -44,6 +50,7 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  color: #2F343B;
 }
 
 h2 {
@@ -52,7 +59,11 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: gray;
+  color: #2F343B;
+}
+
+h3 {
+  color: #2F343B;
 }
 
 p {
@@ -67,7 +78,7 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: white;
+  color: #703030;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
@@ -198,3 +209,6 @@ aside {
   margin-top: 45px;
   @include box_sizing;
 }
+
+.glyphicon-minus-sign{
+color: #880000;}

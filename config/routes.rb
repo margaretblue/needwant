@@ -1,18 +1,22 @@
 Needwant::Application.routes.draw do
  
   root  to: 'users#new'
-  resources :users
+
   get '/help' => 'users#help'
   get '/signup' =>  'users#new'
 
-  resources :sessions, only: [:new, :create]
   get '/signin' => 'sessions#new'
+  get '/signout' => 'sessions#destroy'
   delete '/signout' => 'sessions#destroy'
 
+  get '/item_form/' =>'items#item_form'
+
+  resources :users
+  resources :sessions, only: [:new, :create]
   resources :wishlists
 
   resources :items
 
-  get '/item_form/' =>'items#item_form'
+ 
  
 end

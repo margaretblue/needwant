@@ -1,7 +1,9 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <div class="container">
+
       <%= link_to "Need/Want", root_path, id: "logo" %>
+      
       <nav>
         <ul class="nav pull-right">
           <%= link_to "Home", root_path %>
@@ -24,6 +26,16 @@
           <% end %>
         </div>
       </nav>
+
+      <div> 
+        <% if current_user %>
+          <%=current_user.id %>
+          <%=current_user.name %>
+        <% else %>
+          "cant find current user"
+        <% end %>
+      </div>
+
     </div>
   </div>
 </header>

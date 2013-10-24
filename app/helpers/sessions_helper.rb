@@ -6,12 +6,12 @@ module SessionsHelper
     	self.current_user = user
       #current_user = user
     end
-
+ 
 
   	def signed_in?
       #binding.pry
-  		#!current_user.nil?
-      !current_user.remember_token.nil?
+  		!current_user.nil?
+      #!current_user.remember_token.nil?
   	end
 
   	def current_user=(user)

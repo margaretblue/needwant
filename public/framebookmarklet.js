@@ -1,14 +1,10 @@
-/**
- * @author kathrynbrisbin
- */
-
 var needyFunctions = function(){
 	
 	function getMaxImage() {
 	  var maxDimension = 0;
 	  var maxImage = null;
 
-	  // Iterate through all the images.
+	  // Iterate through all the 'img' like $('img')
 	  var imgElements = document.getElementsByTagName('img');
 	  for (var index in imgElements) {
 	    var img = imgElements[index];
