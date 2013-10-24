@@ -2,8 +2,9 @@
 <div class="row">
   <div class="span8">
     <% if @user.wishlist %>
-      <h3><%= @user.name %>'s Wantlist</h3>  <a class="btn btn-small btn-info" href="/items/new">+ Add Item to Wantlist</a>
-      <ul class="wishlists media-list">
+      <h3><%= @user.name %>'s Wantlist</h3>  <a class="btn btn-small btn-info" href="/items/new">+ Add Item</a>
+      <br /><br />
+      <ul class="wishlists media-list">        
           <% @wishlists.item_ids.each do |item_id| %>
             <% item_obj= Item.find(item_id) %>
               <li class="media col-md-4">
@@ -15,7 +16,7 @@
                 <%= item_obj.brand %><br />
                 $<%= item_obj.price %><br />
                 <span class="badge"><%= item_obj.category %></span>
-                <span class="glyphicon glyphicon-minus-sign">Remove</span>
+                <span class="glyphicon glyphicon-minus-sign"></span>
                 
               </div>
 
