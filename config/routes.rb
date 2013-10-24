@@ -10,6 +10,7 @@ Needwant::Application.routes.draw do
   delete '/signout' => 'sessions#destroy'
 
   get '/item_form/' =>'items#item_form'
+  delete "/items/:id", to: "itemss#destroy"
 
   resources :users
   resources :sessions, only: [:new, :create]
