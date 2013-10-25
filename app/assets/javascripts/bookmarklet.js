@@ -15,8 +15,8 @@ window.bookmarklet = function(opts){fullFunc(opts)};
  
 window.bookmarklet({
  
-    css : 	["https://localhost:3000/assets/application-bookmarklet.css"],
-    js  : 	[ "https://localhost:3000/assets/bookmarklet.js"],
+    css : 	["http://theneedwant.herokuapp.com/assets/application-bookmarklet.css"],
+    js  : 	["http://theneedwant.herokuapp.com/assets/bookmarklet.js"],
     ready : function(){
  		
 		var jq = $.noConflict(true);

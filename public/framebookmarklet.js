@@ -71,7 +71,7 @@ var needyFunctions = function(){
 
 		var image = getMaxImage();
 
-		var url = 'http://localhost:3000/item_form/?'
+		var url = 'http://theneedwant.herokuapp.com/item_form/?'
 		url += '&title=' + document.title;
 		url += '&url=' + window.location.href;
 		url += '&image=' + image;
