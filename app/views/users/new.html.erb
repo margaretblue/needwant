@@ -12,18 +12,18 @@
 		<%= form_for(@user) do |f| %>
 			<%= render 'shared/error_messages' %>
 			
-			<%= f.label :name %>
-			<%= f.text_field :name %>
+			<%= f.label :name %><br />
+			<%= f.text_field :name %><br />
 
-			<%= f.label :email %>
-			<%= f.text_field :email %>
+			<%= f.label :email %><br />
+			<%= f.text_field :email %><br />
 
-			<%= f.label :password %>
-			<%= f.password_field :password %>
+			<%= f.label :password %><br />
+			<%= f.password_field :password %><br />
 
-			<%= f.label :password_confirmation, "Confirmation" %>
-			<%= f.password_field :password_confirmation %>
- 
+			<%= f.label :password_confirmation, "Confirmation" %><br />
+			<%= f.password_field :password_confirmation %><br />
+ 				<br />
 			<%= f.submit "Sign me Up!", class: "btn btn-large btn-primary" %>
 		<% end %>
 		</div>
@@ -32,11 +32,11 @@
 			<h2>Sign In</h2>
     		<%= form_for(:session, url: sessions_path, :html => {:class => "form-inline"}) do |f| %>
 
-    		<%= f.label :email %>
-    		<%= f.text_field :email %>
+    		<%= f.label :email %><br />
+    		<%= f.text_field :email %><br />
 
-    		<%= f.label :password %>
-    		<%= f.password_field :password %>
+    		<%= f.label :password %><br />
+    		<%= f.password_field :password %><br /><br />
 
     		<%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
 
