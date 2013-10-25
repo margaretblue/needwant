@@ -16,3 +16,12 @@
 	font-family: 'Questrial', sans-serif;
 	font-size: 30px;
 }
+
+.row {
+	padding-top: 60px;
+}
+
+form {
+	padding-top: 30px;
+
+}

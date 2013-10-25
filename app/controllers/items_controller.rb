@@ -24,7 +24,7 @@ class ItemsController < ApplicationController
 		Item.find(params[:id]).destroy
 		# or you can do this
 		# Sample.delete(params[:id])
-		redirect_to user_path
+		redirect_to user_path(current_user.id)
 	end
 
 	def getbookmark
