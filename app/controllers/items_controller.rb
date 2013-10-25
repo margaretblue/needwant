@@ -27,4 +27,8 @@ class ItemsController < ApplicationController
 		redirect_to user_path
 	end
 
+	def getbookmark
+		render 'getbookmark.html.erb'
+	end
+
 end

@@ -11,3 +11,8 @@
  *= require_self
  *= require_tree .
  */
+
+#logo {
+	font-family: 'Questrial', sans-serif;
+	font-size: 30px;
+}
