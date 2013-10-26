@@ -1,4 +1,4 @@
-var needyFunctions = function(){
+ var needyFunctions = function(){
 	
 	function getMaxImage() {
 	  var maxDimension = 0;
@@ -70,10 +70,12 @@ var needyFunctions = function(){
 		//var default_price = encodeURIComponent(get_default_price());
 
 		var image = getMaxImage();
+		var rawURL = window.location.href;
+		var rawTitle = document.title;
 
-		var url = 'http://theneedwant.herokuapp.com/item_form/?'
-		url += '&title=' + document.title;
-		url += '&url=' + window.location.href;
+		var url = 'http://localhost:3000/item_form/?'
+		url += '&title=' + encodeURIComponent(rawTitle);
+		url += '&url=' + encodeURIComponent(rawURL);
 		url += '&image=' + image;
 	//	url += '&price=' + default_price;
 		try {
@@ -142,7 +144,7 @@ var needyFunctions = function(){
 			container.style.right = "0";
 			container.style.zIndex = 100000;
 			container.style.width = "350px";
-			container.style.height = "210px";
+			container.style.height = "250px";
 			container.style.backgroundColor = "white";
 			container.innerHTML = '<iframe style="width:100%;height:100%;border:0px;" id="needyframe"></iframe>';
 			document.body.appendChild(container);
