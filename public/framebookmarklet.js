@@ -73,7 +73,7 @@
 		var rawURL = window.location.href;
 		var rawTitle = document.title;
 
-		var url = 'http://localhost:3000/item_form/?'
+		var url = 'http://theneedwant.herokuapp.com/item_form/?'
 		url += '&title=' + encodeURIComponent(rawTitle);
 		url += '&url=' + encodeURIComponent(rawURL);
 		url += '&image=' + image;
