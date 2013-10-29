@@ -1,25 +1,29 @@
-<h4>Add new item to Wishlist <% @user.name %></h4> 
-	<div class="row">
-	<div class="col-md-4 offset3"> 
-		<%= form_for(:item, url: "/items") do |f| %>
+<br />
+<body onload="addText();">
+  <p style="float:right;"><a href="javascript:closeBox('close');">Close</a></p>
+        <div class="row">
+        <div class="col-md-4 offset3"> 
+          <p><strong>Add item to Wantlist</strong></p>
+                <%= form_for(:item, url: "/items") do |f| %>
 
-			<%= f.hidden_field :wishlist_id, :value => @wishlist_id %>
-		 	<%= f.label :title %>:
-		 	<%= f.text_field :title %><br />
+                        <%= f.hidden_field :wishlist_id, :value => @wishlist_id %>
 
-			<%= f.label :category %>:
-			<%= f.text_field :category %><br />
+                        <%= f.hidden_field :url, :value => @url %>
+ 
+                        <%= f.hidden_field :image, :value => @image %>
 
-			<%= f.label :price %>:
-			<%= f.text_field :price %><br />
+                         <%= f.label :title %>:<br />
+                         <%= f.text_field :title, :placeholder => @title, :value => @title %><br />
 
-			<%= f.label :url %>:
-			<%= f.text_field :url %><br />
 
-			<%= f.label :image %>: 
-			<%= f.text_field :image %><br />
+                        <%= f.label :category %>:<br />
+                        <%= f.text_field :category %><br />
 
-		 	<%= f.submit  "Do Want!", class: "btn btn-small btn-primary" %>
-		<% end %>
-	</div>
+                        <%= f.label :price %>:<br />
+                        <%= f.text_field :price, :placeholder => @price, :value => @price %><br />
+
+                         <%= f.submit  "Do Want!", class: "btn btn-small btn-primary" %>
+                <% end %>
+        </div>
 </div>
+</body>

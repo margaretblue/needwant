@@ -73,14 +73,16 @@
 		var rawURL = window.location.href;
 		var rawTitle = document.title;
 
-		var url = 'http://theneedwant.herokuapp.com/item_form/?'
+		// var url = 'http://localhost:3000/item_form/?'
+		var url = 'http://localhost:3000/items/new?'
 		url += '&title=' + encodeURIComponent(rawTitle);
 		url += '&url=' + encodeURIComponent(rawURL);
 		url += '&image=' + image;
+		url += "&bookmarklet=true"
 	//	url += '&price=' + default_price;
 		try {
 			iframe.location.replace(url);
-		} 
+		}
 		catch (e) {
 			iframe.location = url; // safari
 		}

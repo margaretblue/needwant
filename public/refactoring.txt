@@ -1,0 +1,16 @@
+* Update your README ;-)
+* framebookmarklet.js should be in the javascript folder
+* Move business logic from your controller to the models and/or helpers
+* An action will inherently load the view mage that matches it, so you shouldn't have to render the getbookmark.html.erb page in that action
+* For the item_form action, at the end of it you can just say render :item_form instead of referencing the view page, because the actions are linked to their view pages
+* when asking if something is nil in Ruby, you can write it like this: if @title.nil? instead of doing the ==
+* You have two 'create' actions in your Wishlists controller
+* You have the prices_to_int method located in both application_helper and items_helper and it doesn't need to be written out in both
+* In your getbookmark.html.erb file you should change your paragraph into an ordered list, since that what it is.
+* Why is there a <br> tag at the top of your document? There should be no reason for a carriage return. If you're trying to push your content down, you should edit your CSS for the page instead
+* It's better practice to use external stylesheets instead of inline CSS. Your <p style="float:right"> can be put into a class that can be added to an element whenever you want to float something right
+* You already have body tags in your application.html.erb file, so by adding body tags into your item_form.html.erb you're creating two sets of body tags in the DOM. You can probably move your onload request to the JS file that you're using, or find some other way to DRY it up.
+* You don't need a class called "footer," you can just access the footer tag in your CSS the same way you would any other html tag
+* In your _header.html.erb partial you have a CSS stylesheet link and that shouldn't go into the body of your html, that should go into your head tags on your application.html.erb, which is where CSS stylesheets are usually loaded in
+* In the _user_info.html.erb partial you have two sets of spans that don't reference any classes, which is usually what spans are for, to individually style some content. Should these maybe be paragraph tags, or divs?
+* In the _wishlist_form.html.erb you have ruby code tags within ruby code tags, which is unnecessary. you can access the current_user.id through normal string interpolation: #{current_user.id}

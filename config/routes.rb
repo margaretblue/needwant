@@ -9,9 +9,6 @@ Needwant::Application.routes.draw do
   get '/signout' => 'sessions#destroy'
   delete '/signout' => 'sessions#destroy'
 
-  get '/item_form/' =>'items#item_form'
-  delete '/items/:id', to: 'items#destroy'
-
   get '/getbookmark' => 'items#getbookmark' 
 
   resources :users
@@ -19,7 +16,5 @@ Needwant::Application.routes.draw do
   resources :wishlists
 
   resources :items
-
- 
  
 end
