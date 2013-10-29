@@ -34,6 +34,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'sqlite3'
   gem 'quiet_assets'
+  gem 'konacha'
 end
 
 # To use ActiveModel has_secure_password

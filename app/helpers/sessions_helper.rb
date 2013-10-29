@@ -9,7 +9,6 @@ module SessionsHelper
  
 
   	def signed_in?
-      #binding.pry
   		!current_user.nil?
       #!current_user.remember_token.nil?
   	end

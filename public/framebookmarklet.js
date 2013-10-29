@@ -74,7 +74,7 @@
 		var rawTitle = document.title;
 
 		// var url = 'http://localhost:3000/item_form/?'
-		var url = 'http://localhost:3000/items/new?'
+		var url = 'http://theneedwant.herokuapp.com/items/new?'
 		url += '&title=' + encodeURIComponent(rawTitle);
 		url += '&url=' + encodeURIComponent(rawURL);
 		url += '&image=' + image;

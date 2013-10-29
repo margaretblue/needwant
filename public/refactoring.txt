@@ -1,3 +1,4 @@
+* render :layout => false, 
 * Update your README ;-)
 * framebookmarklet.js should be in the javascript folder
 * Move business logic from your controller to the models and/or helpers
