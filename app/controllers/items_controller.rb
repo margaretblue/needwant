@@ -9,6 +9,7 @@ class ItemsController < ApplicationController
 		# if Diffbot doesn't return title get one from js scrape
 		@title ||= params[:title]
 		# if Diffbot doesn't return a price get one from js scrape
+		# value = condition ? value_if_true : value_else
 		@price = @url ? get_price_from_api(@url) : params[:price]
 		@bookmarklet = params[:bookmarklet].present?
 	end
